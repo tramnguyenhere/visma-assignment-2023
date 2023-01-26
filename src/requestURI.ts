@@ -1,0 +1,1 @@
+export const uri = 'visma-identity://sign?source=vismasign&documentid=105ab44'
