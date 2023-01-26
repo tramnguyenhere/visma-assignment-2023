@@ -26,6 +26,13 @@ Visma Solutions Oy is developing an application for identity management. With th
 
 (! Ensure to run `node index` only when you are in 'dist' directory)
 
+Example:
+Output for Valid request\
+![Screenshot 2023-01-26 at 22 52 29](https://user-images.githubusercontent.com/57455557/214948027-0e025e4c-b451-4648-aef8-eebbd13b1cd3.png) \
+Output for Invalid request\
+![Screenshot 2023-01-26 at 22 53 14](https://user-images.githubusercontent.com/57455557/214948175-69748b40-d77b-416c-8596-d1da4b964678.png)
+
+
 ## Understanding of the problem
 
 ### Understanding:
