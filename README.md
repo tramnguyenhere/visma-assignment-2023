@@ -1,5 +1,7 @@
 # Solution for Visma Programming Assignment - Summer Trainee 2023: Software Developer
 
+Author: Tram Nguyen
+
 ## Problem:
 
 Visma Solutions Oy is developing an application for identity management. With the application, users can login to integrated applications, confirm payments and sign documents. Identity management is a mobile application, and other apps can call its services through deep linking. When this is used, the identity management application would open automatically from the right in-app location. In this assignment, you will be implementing a part of this logic.
@@ -12,7 +14,7 @@ Visma Solutions Oy is developing an application for identity management. With th
 
 ### Clone this repo.
 
-2. On your terminal, run: `git clone`
+2. On your terminal, run: `git clone https://github.com/tramnguyenhere/visma-assignment-2023.git`
 3. On your terminal, navigate to root directory and install by running: `npm install`
 
 ### Run the code
