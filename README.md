@@ -22,9 +22,9 @@ Visma Solutions Oy is developing an application for identity management. With th
 4. Open the file src/requestURI.ts, replace the available value of the variable "uri" to your own value
 5. On your terminal, run: `npm run build`
 6. From the root directory, navigate to `dist` directory by running: `cd dist`
-7. On your terminal, run: `npm start`
+7. On your terminal, run: `node index`
 
-(! Ensure to run `npm start` only when you are in 'dist' directory)
+(! Ensure to run `node index` only when you are in 'dist' directory)
 
 ## Understanding of the problem
 

@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "node index"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "Tram Nguyen",
