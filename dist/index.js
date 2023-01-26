@@ -1,22 +1,5 @@
-// Declare scheme
-var Scheme;
-(function (Scheme) {
-    Scheme["VISMAIDENTITY"] = "visma-identity";
-})(Scheme || (Scheme = {}));
-// Declare all valid paths.
-var Path;
-(function (Path) {
-    Path["LOGIN"] = "login";
-    Path["CONFIRM"] = "confirm";
-    Path["SIGN"] = "sign";
-})(Path || (Path = {}));
-// Declare all valid URI Parameters.
-var URIParameter;
-(function (URIParameter) {
-    URIParameter["SOURCE"] = "source";
-    URIParameter["PAYMENTNUMBER"] = "paymentnumber";
-    URIParameter["DOCUMENTID"] = "documentid";
-})(URIParameter || (URIParameter = {}));
+import { uri } from "./requestURI.js";
+import { Path, Scheme, URIParameter } from "./types.js";
 // The class that handles the identification of requests.
 class RequestIdentification {
     constructor(uri) {
@@ -65,13 +48,19 @@ class RequestIdentification {
         return false;
     }
     /**
-     * Return the object that includes the validity of the request, the scheme, the path, and the parameters
+     * Return the object that includes the validity of the request, the scheme, the path, and the parameters.
      * @returns object.
      */
     isURIValid() {
+        // If the request URI is valid.
         if (this.isSchemeValid() && this.areParamsValid()) {
             let paramObj = {};
-            this.paramsWithValues.forEach(function (pair) {
+            /*
+                1. Divide each element in paramsWithValues into an ordered list of substring.
+                2. In each element, assign the first substring as key and the latter as value.
+                3. Assign the object to the variable paramObj.
+            */
+            this.paramsWithValues.forEach((pair) => {
                 const [key, value] = pair.split('=');
                 paramObj = Object.assign(paramObj, { [key]: value });
             });
@@ -82,16 +71,11 @@ class RequestIdentification {
         }
         return {
             isURIValid: false,
-            message: 'The request URI is not valid.'
+            message: 'The request URI is not valid to further identify.'
         };
     }
 }
-const client = new RequestIdentification('visma-identity://sign?source=vismasign&documentid=105ab44');
+// Replace the parameter URI below with your own request to identify.
+const client = new RequestIdentification(uri);
 console.log(client.isURIValid());
-const a = ['source=vismasign', 'documentid=105ab44'];
-const b = {
-    source: 'vismasign',
-    documentid: '105ab44'
-};
-export {};
 //# sourceMappingURL=index.js.map
